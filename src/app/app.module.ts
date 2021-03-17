@@ -11,6 +11,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { UsuarioModule } from './usuario/usuario.module';
+import { LayoutModule } from './layout/layout.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { UsuarioModule } from './usuario/usuario.module';
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    UsuarioModule
+    UsuarioModule,
+    LayoutModule
   ],
   providers: [],
   bootstrap: [AppComponent]
