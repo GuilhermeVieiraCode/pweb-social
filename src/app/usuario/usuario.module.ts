@@ -1,34 +1,31 @@
 import { NgModule } from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { AppRoutingModule } from './app-routing.module';
+import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
-import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { UsuarioModule } from './usuario/usuario.module';
+import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
+import { ListagemUsuarioComponent } from './listagem-usuario/listagem-usuario.component';
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
+  declarations: [CadastroUsuarioComponent, ListagemUsuarioComponent],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
+    BrowserAnimationsModule,  
+    CommonModule,
     FormsModule,
-    BrowserAnimationsModule,
     MatFormFieldModule,
     MatInputModule,
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    UsuarioModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  exports: [
+      CadastroUsuarioComponent,
+      ListagemUsuarioComponent
+  ]
 })
-export class AppModule { }
+export class UsuarioModule { }

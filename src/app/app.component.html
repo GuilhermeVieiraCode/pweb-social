@@ -2,11 +2,7 @@
 
 <p>{{titulo}}</p>
 
-Nome:<input [(ngModel)]="usuario.nome"><br>
-Cpf:<input [(ngModel)]="usuario.cpf"><br>
-Idade:<input [(ngModel)]="usuario.idade"><br>
+<app-cadastro-usuario></app-cadastro-usuario>
 
-<button (click)="inserirUsuario()">Inserir</button>
-<ul>
-    <li *ngFor="let usuario of usuarios">{{usuario.nome}}</li>
-</ul>
+<app-listagem-usuario></app-listagem-usuario>
+
