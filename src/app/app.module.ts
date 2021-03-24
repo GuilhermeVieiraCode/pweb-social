@@ -28,7 +28,7 @@ import { LayoutModule } from './layout/layout.module';
     MatIconModule,
     MatCardModule,
     UsuarioModule,
-    LayoutModule
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

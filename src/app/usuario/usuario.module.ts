@@ -7,6 +7,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { ListagemUsuarioComponent } from './listagem-usuario/listagem-usuario.component';
@@ -22,6 +23,7 @@ import { ListagemUsuarioComponent } from './listagem-usuario/listagem-usuario.co
     MatButtonModule,
     MatIconModule,
     MatCardModule,
+    FlexLayoutModule
   ],
   exports: [
       CadastroUsuarioComponent,

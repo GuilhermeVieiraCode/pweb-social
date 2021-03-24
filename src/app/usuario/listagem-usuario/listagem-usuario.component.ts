@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Usuario } from 'src/app/shared/model/usuario';
+import { USUARIOS } from 'src/app/shared/model/USUARIOS';
 
 @Component({
   selector: 'app-listagem-usuario',
@@ -7,12 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListagemUsuarioComponent implements OnInit {
   
-    usuarios = [
-        {nome: 'Usuario 1', cpf: '123', idade: 21},
-        {nome: 'Usuario 2', cpf: '124', idade: 22},
-        {nome: 'Usuario 3', cpf: '125', idade: 23},
-    ]
+    usuarios = USUARIOS;
+
     constructor() { }
+
+    editar(usuario: Usuario): void{
+        usuario.nome += ' Alterado';
+    }
+
+    remover(usuario: Usuario): void{
+        const index = this.usuarios.indexOf(usuario);
+        if(index > -1){
+            this.usuarios.splice(index, 1);
+        }
+    }
 
     ngOnInit(): void {
     }
