@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/shared/model/usuario';
-import { USUARIOS } from 'src/app/shared/model/USUARIOS';
+import { UsuarioService } from 'src/app/shared/services/usuario.service';
 
 @Component({
   selector: 'app-cadastro-usuario',
@@ -10,15 +10,15 @@ import { USUARIOS } from 'src/app/shared/model/USUARIOS';
 export class CadastroUsuarioComponent implements OnInit {
 
   usuario: Usuario;
-  usuarios: Array<Usuario>;
 
-  constructor() { 
+  constructor( private usuarioService: UsuarioService) { 
     this.usuario = new Usuario();
-    this.usuarios = USUARIOS;
   }
 
   inserirUsuario(){
-    this.usuarios.push(this.usuario);
+    this.usuarioService.inserir(this.usuario).subscribe({
+        next: (usuario) => console.log(usuario)
+    });
     this.usuario = new Usuario;
   }
 

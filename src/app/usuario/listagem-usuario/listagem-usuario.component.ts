@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Usuario } from 'src/app/shared/model/usuario';
-import { USUARIOS } from 'src/app/shared/model/USUARIOS';
+import { UsuarioService } from 'src/app/shared/services/usuario.service';
 
 @Component({
   selector: 'app-listagem-usuario',
@@ -9,9 +9,15 @@ import { USUARIOS } from 'src/app/shared/model/USUARIOS';
 })
 export class ListagemUsuarioComponent implements OnInit {
   
-    usuarios = USUARIOS;
+    usuarios!: Array<Usuario>;
 
-    constructor() { }
+    constructor(private usuarioService: UsuarioService) { }
+    
+    ngOnInit(): void {
+        this.usuarioService.listar().subscribe({
+            next: (usuarios) => this.usuarios = usuarios
+        });
+    }
 
     editar(usuario: Usuario): void{
         usuario.nome += ' Alterado';
@@ -24,7 +30,5 @@ export class ListagemUsuarioComponent implements OnInit {
         }
     }
 
-    ngOnInit(): void {
-    }
 
 }
