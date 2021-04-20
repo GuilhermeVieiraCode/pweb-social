@@ -8,12 +8,15 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatTableModule} from '@angular/material/table';
+
 
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { ListagemUsuarioComponent } from './listagem-usuario/listagem-usuario.component';
+import { ListagemUsuarioTabelaComponent } from './listagem-usuario-tabela/listagem-usuario-tabela.component';
 
 @NgModule({
-  declarations: [CadastroUsuarioComponent, ListagemUsuarioComponent],
+  declarations: [CadastroUsuarioComponent, ListagemUsuarioComponent, ListagemUsuarioTabelaComponent],
   imports: [
     BrowserAnimationsModule,  
     CommonModule,
@@ -23,11 +26,13 @@ import { ListagemUsuarioComponent } from './listagem-usuario/listagem-usuario.co
     MatButtonModule,
     MatIconModule,
     MatCardModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    MatTableModule
   ],
   exports: [
       CadastroUsuarioComponent,
-      ListagemUsuarioComponent
+      ListagemUsuarioComponent,
+      ListagemUsuarioTabelaComponent
   ]
 })
 export class UsuarioModule { }
