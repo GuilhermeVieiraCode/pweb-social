@@ -9,7 +9,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatCardModule } from '@angular/material/card';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatTableModule} from '@angular/material/table';
-
+import { PipesModule } from '../shared/pipes/pipes.module';
 
 import { CadastroUsuarioComponent } from './cadastro-usuario/cadastro-usuario.component';
 import { ListagemUsuarioComponent } from './listagem-usuario/listagem-usuario.component';
@@ -27,7 +27,8 @@ import { ListagemUsuarioTabelaComponent } from './listagem-usuario-tabela/listag
     MatIconModule,
     MatCardModule,
     FlexLayoutModule,
-    MatTableModule
+    MatTableModule,
+    PipesModule
   ],
   exports: [
       CadastroUsuarioComponent,
