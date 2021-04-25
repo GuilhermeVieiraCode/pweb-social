@@ -12,7 +12,7 @@ import { UsuarioService } from 'src/app/shared/services/usuario.service';
 export class ListagemUsuarioTabelaComponent implements OnInit {
 
     usuarios!: MatTableDataSource<Usuario>;
-    exibirColunas =  ['id', 'nome', 'cpf', 'idade', 'acoes'];
+    exibirColunas =  ['id', 'nome', 'cpf', 'idade', 'telefone', 'acoes'];
     
     constructor(private usuarioService: UsuarioService,
                 private roteador: Router){ }

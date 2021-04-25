@@ -2,9 +2,13 @@
     <mat-card *ngFor="let usuario of usuarios" class="mat-card-simples" fxFlex="20%">
         <mat-card-header>
         <mat-card-title>
-            <mat-icon>account_circle</mat-icon>{{usuario.nome}}
+            <mat-icon>account_circle</mat-icon>{{usuario.nome | titlecase}}
         </mat-card-title>
-        <mat-card-subtitle *ngIf="usuario.cpf">CPF: {{usuario.cpf | cpf}} Idade: {{usuario.idade}}</mat-card-subtitle>
+        <mat-card-subtitle 
+          *ngIf="usuario.cpf">CPF: {{usuario.cpf | cpf}} 
+          Idade: {{usuario.idade}} 
+          Telefone: {{usuario.telefone | fone }}
+        </mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
         Blablabla blaBlablabla blaBlablabla blaBlablabla blaBlablabla blaBlablabla

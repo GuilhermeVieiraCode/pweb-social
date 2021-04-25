@@ -24,6 +24,15 @@
           placeholder="digite a idade"
         />
       </mat-form-field>
+
+      <mat-form-field class="mat-form-principal" appearance="fill">
+        <mat-label>Telefone</mat-label>
+        <input
+          matInput
+          [(ngModel)]="usuario.telefone"
+          placeholder="digite seu número de telefone"
+        />
+      </mat-form-field>
     </mat-card-content>
     <mat-card-footer>
       <button
